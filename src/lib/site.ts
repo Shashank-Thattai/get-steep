@@ -4,9 +4,12 @@ export const SITE = {
   url: "https://buy.steep.shashankthattai.dev",
   demoUrl: "https://steep.shashankthattai.dev",
   componentsUrl: "https://steep-components.shashankthattai.dev",
-  // TODO: replace with real Stripe Payment Link before launch
+  // Stripe Payment Link → $199 one-off, captures GitHub username via
+  // custom field, redirects to /thanks. Override with the env var if
+  // you swap to a different link later.
   stripePaymentLinkUrl:
-    process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_URL ?? "#pricing",
+    process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_URL ??
+    "https://buy.stripe.com/3cI00l4YV7zO89Y8Mf0co00",
   // TODO: real contact email
   contactEmail: "shashank@steep.shashankthattai.dev",
   twitterHandle: "@shashankthattai",
