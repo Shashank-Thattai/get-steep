@@ -1,4 +1,6 @@
 import { Nav } from "@/components/meta/nav";
+import { EarlyAccessBar } from "@/components/meta/early-access-bar";
+import { StickyCta } from "@/components/meta/sticky-cta";
 import { Hero } from "@/components/sections/hero";
 import { LiveDemo } from "@/components/sections/live-demo";
 import { PainBlock } from "@/components/sections/pain";
@@ -20,6 +22,7 @@ import { Footer } from "@/components/sections/footer";
 export default function Page() {
   return (
     <>
+      <EarlyAccessBar />
       <Nav />
       <main className="flex-1">
         <Hero />
@@ -40,6 +43,7 @@ export default function Page() {
         <FinalCta />
       </main>
       <Footer />
+      <StickyCta />
     </>
   );
 }

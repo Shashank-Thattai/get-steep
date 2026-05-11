@@ -4,7 +4,7 @@ type Cell = string | boolean;
 const cols = ["steep", "Shopify", "GoDaddy", "ShipFast", "DIY"] as const;
 const rows: { label: string; values: [Cell, Cell, Cell, Cell, Cell] }[] = [
   { label: "Price", values: ["$199 once", "$29/mo", "$10–25/mo", "$249 once", "$0 + time"] },
-  { label: "Setup time", values: ["~2 hours", "~1 day", "~1 day", "1–2 weeks", "80–200 hrs"] },
+  { label: "Setup time", values: ["~2 hours", "~1 day", "~1 day", "~1 day (then build product)", "80–200 hrs"] },
   { label: "Own the code", values: [true, false, false, true, true] },
   { label: "Storefront included", values: [true, true, true, false, false] },
   { label: "Admin panel included", values: [true, true, true, false, false] },
@@ -70,8 +70,9 @@ export function ComparisonTable() {
           </table>
         </div>
         <p className="steep-meta mt-4 text-steep-ink-3">
-          Every number is verifiable. ShipFast is for SaaS, not stores — listed
-          for context only.
+          Every number is verifiable. ShipFast is a SaaS boilerplate (you build
+          the product on top) — fair comparison because both are indie kits at
+          similar price points, but they solve different problems.
         </p>
       </div>
     </section>
