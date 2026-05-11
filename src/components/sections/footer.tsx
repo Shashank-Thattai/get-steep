@@ -44,8 +44,8 @@ export function Footer() {
           <div>
             <div className="steep-display mb-3 text-3xl leading-none">steep</div>
             <p className="steep-body-sm max-w-[30ch] text-steep-ink-3">
-              A finished Next.js storefront. Digital or physical. Own the code.
-              Ship today.
+              A finished Next.js storefront. Digital, physical, or
+              subscriptions. Own the code. Ship today.
             </p>
           </div>
           {cols.map((c) => (

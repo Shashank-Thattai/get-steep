@@ -17,9 +17,10 @@ export function Hero() {
             Launch your storefront this weekend.
           </h1>
           <p className="steep-body mb-8 max-w-[56ch] text-steep-ink-2">
-            steep is a finished Next.js store. Sell digital downloads or ship
-            physical goods. Cart, checkout, admin, email, shipping, inventory —
-            all wired. Pay once. Own the code.
+            steep is a finished Next.js store. Sell digital downloads, ship
+            physical goods, or charge recurring subscriptions. Cart, checkout,
+            admin, email, shipping, inventory, MRR dashboard — all wired. Pay
+            once. Own the code.
           </p>
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <a

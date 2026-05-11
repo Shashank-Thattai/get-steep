@@ -4,16 +4,18 @@ import { COHORT, currentPrice, nextThreshold } from "@/lib/early-count";
 
 const included = [
   "Full Next.js 16 source code",
-  "All 49 SQL migrations + current.sql",
+  "All SQL migrations + current.sql snapshot",
   "Admin panel + no-code site editor",
   "Stripe checkout + automatic tax",
+  "Stripe Subscriptions + customer portal + cancel UI",
+  "MRR / ARR / churn admin dashboard",
   "Shippo shipping (USPS/UPS/FedEx) + label printing",
   "Atomic inventory + variant management",
-  "HMAC-signed downloads for digital products",
-  "Resend transactional emails (7 templates)",
+  "HMAC-signed downloads + per-purchase license keys",
+  "Resend transactional emails (12 templates: orders, shipping, refunds, subscriptions)",
   "Supabase auth + RLS + MFA + passkeys",
-  "23 docs pages + 5 Playwright e2e suites",
-  "Lifetime updates",
+  "23 docs pages + Playwright e2e suites",
+  "Lifetime updates (covers v1.1 SaaS + future net-new features)",
   "30-day refund — no questions",
   "MIT-style license (no resale, no fork-and-sell)",
 ];

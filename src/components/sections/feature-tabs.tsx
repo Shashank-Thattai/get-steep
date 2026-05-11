@@ -58,6 +58,16 @@ const tabs = [
     ],
   },
   {
+    key: "subscriptions",
+    label: "Subscriptions",
+    bullets: [
+      "Stripe Subscriptions — monthly or yearly, optional free trials",
+      "Customer portal + native cancel/resume from your branded UI",
+      "Admin dashboard with MRR, ARR, active count, churn-30d",
+      "5 dunning + lifecycle email templates wired (welcome, trial-end, payment-failed, canceled, renewed)",
+    ],
+  },
+  {
     key: "mobile",
     label: "Mobile",
     bullets: [

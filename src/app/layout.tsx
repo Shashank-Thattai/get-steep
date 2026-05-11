@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s — steep",
   },
   description:
-    "A finished Next.js storefront. Sell digital downloads or ship physical goods. Cart, checkout, admin, email, shipping, inventory — all wired. Pay once, own the code, ship today.",
+    "A finished Next.js storefront. Sell digital downloads, ship physical goods, or charge recurring subscriptions. Cart, checkout, admin, email, shipping, inventory, MRR dashboard — all wired. Pay once, own the code, ship today.",
   metadataBase: new URL("https://buy.steep.shashankthattai.dev"),
   openGraph: {
     type: "website",

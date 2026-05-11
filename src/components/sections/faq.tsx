@@ -56,6 +56,14 @@ const items = [
     a: "Yes. Shippo is wired for live shipping rates (USPS, UPS, FedEx) in checkout, atomic inventory reservation prevents overselling, and admins can buy + print labels from the order page or enter manual tracking numbers. Saved addresses and refund flow included.",
   },
   {
+    q: "Does it handle subscriptions / recurring billing?",
+    a: "Yes. Stripe Subscriptions wired — monthly or yearly, optional free trials, mixed cart (sub + one-time digital items in same checkout), customer portal + native cancel/resume, 3-day grace period on past_due. Admin dashboard shows MRR / ARR / churn. Dunning + lifecycle emails (trial ending, payment failed, canceled, renewed) all sent through Resend.",
+  },
+  {
+    q: "Can I sell digital + physical + subscriptions from the same store?",
+    a: "Yes. Each product has a 'billing type' (one-time or subscription) plus a 'physical' flag. The cart handles mixed orders correctly. Subscriptions check out via Stripe's subscription mode; one-time items go via standard checkout; mixed (sub + digital one-time) co-bills in a single session via Stripe's add_invoice_items.",
+  },
+  {
     q: "Does it handle digital downloads?",
     a: "Yes. HMAC-signed download URLs with short expiry — no guessable item IDs. The buyer&apos;s account page shows their entitlements. Re-download is supported.",
   },

@@ -1,7 +1,7 @@
 import { X } from "lucide-react";
 
 const items = [
-  "you want a generic SaaS boilerplate — try ShipFast or makerkit",
+  "you're building a complex SaaS (multi-tenant, workspaces, fine-grained billing tiers) — steep handles single-product subs cleanly, but ShipFast is closer to the right tool for from-scratch SaaS",
   "you want WooCommerce or anything PHP — steep is JS-only",
   "you have >100k SKUs or need warehouse integration — Shopify Plus fits better",
   "you need B2B net-30 invoicing or quote-to-cash — outside steep's scope",
