@@ -1,26 +1,208 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-display);
+  --font-heading: var(--font-display);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Steep brand tokens — Theme A "Bone & Moss" (ported from /kit) */
+  --color-steep-bg: var(--steep-bg);
+  --color-steep-paper: var(--steep-paper);
+  --color-steep-bone: var(--steep-bone);
+  --color-steep-ink: var(--steep-ink);
+  --color-steep-ink-2: var(--steep-ink-2);
+  --color-steep-ink-3: var(--steep-ink-3);
+  --color-steep-ink-4: var(--steep-ink-4);
+  --color-steep-line: var(--steep-line);
+  --color-steep-line-2: var(--steep-line-2);
+  --color-steep-moss: var(--steep-moss);
+  --color-steep-moss-2: var(--steep-moss-2);
+  --color-steep-sage: var(--steep-sage);
+  --color-steep-sage-2: var(--steep-sage-2);
+  --color-steep-amber: var(--steep-amber);
+  --color-steep-slate: var(--steep-slate);
+  --color-steep-ok: var(--steep-ok);
+  --color-steep-warn: var(--steep-warn);
+  --color-steep-err: var(--steep-err);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+ * steep "Bone & Moss" — single source of truth.
+ * Same tokens as /kit so brand identity carries across the buy page,
+ * the live demo, and the components site.
+ */
+:root {
+  --steep-bg: #FAFAF7;
+  --steep-paper: #F4F1E8;
+  --steep-bone: #FFFEFB;
+  --steep-ink: #0E1F1A;
+  --steep-ink-2: #2A3D36;
+  --steep-ink-3: #5C6B65;
+  --steep-ink-4: #8F9A95;
+  --steep-line: #DCD5C2;
+  --steep-line-2: #E8E2D0;
+  --steep-moss: #1F3A30;
+  --steep-moss-2: #2D5547;
+  --steep-sage: #9BB5A8;
+  --steep-sage-2: #C4D3CB;
+  --steep-amber: #B8841C;
+  --steep-slate: #2A4D55;
+  --steep-ok: #2D5547;
+  --steep-warn: #B8841C;
+  --steep-err: #8B2A1C;
+
+  --steep-shadow-1: 0 1px 0 rgba(14, 31, 26, 0.06);
+  --steep-shadow-2: 0 1px 2px rgba(14, 31, 26, 0.08), 0 0 0 1px rgba(14, 31, 26, 0.04);
+  --steep-shadow-3: 0 8px 24px -8px rgba(14, 31, 26, 0.18), 0 0 0 1px rgba(14, 31, 26, 0.06);
+
+  --steep-radius: 6px;
+  --steep-caps-tracking: 0.12em;
+
+  /* shadcn aliases mapped onto steep tokens */
+  --background: var(--steep-bg);
+  --foreground: var(--steep-ink);
+  --card: var(--steep-bone);
+  --card-foreground: var(--steep-ink);
+  --popover: var(--steep-bone);
+  --popover-foreground: var(--steep-ink);
+  --primary: var(--steep-moss);
+  --primary-foreground: var(--steep-bg);
+  --secondary: var(--steep-bone);
+  --secondary-foreground: var(--steep-ink);
+  --muted: var(--steep-paper);
+  --muted-foreground: var(--steep-ink-3);
+  --accent: var(--steep-sage);
+  --accent-foreground: var(--steep-ink);
+  --destructive: var(--steep-err);
+  --border: var(--steep-line);
+  --input: var(--steep-line);
+  --ring: var(--steep-moss);
+  --radius: var(--steep-radius);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--steep-sage-2);
+    color: var(--steep-ink);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .steep-display {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+  .steep-h1 {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+  }
+  .steep-h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(26px, 3.5vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .steep-h3 {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .steep-body {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .steep-meta {
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+  .steep-caps {
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: var(--steep-caps-tracking);
+    text-transform: uppercase;
+  }
+  .steep-price {
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .steep-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 32px);
+  }
+  .steep-section {
+    padding-block: clamp(48px, 8vw, 96px);
+  }
+  .steep-hairline {
+    border-top: 1px solid var(--steep-line);
+  }
 }
