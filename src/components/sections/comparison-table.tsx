@@ -10,8 +10,10 @@ const rows: { label: string; values: [Cell, Cell, Cell, Cell, Cell] }[] = [
   { label: "Admin panel included", values: [true, true, true, false, false] },
   { label: "Cart + PDP + checkout", values: [true, true, true, false, false] },
   { label: "Coupons / refund flow", values: [true, true, "partial", false, false] },
+  { label: "Live shipping rates (Shippo)", values: [true, true, "partial", false, false] },
+  { label: "Inventory + oversell protection", values: [true, true, "partial", false, false] },
+  { label: "Digital downloads (signed URLs)", values: [true, "addon", false, false, false] },
   { label: "MFA / passkeys", values: [true, "addon", false, false, false] },
-  { label: "Signed downloads", values: [true, false, false, false, false] },
   { label: "Customizable (source)", values: [true, false, false, true, true] },
   { label: "5-year TCO", values: ["$199", "$1,740", "$1,200+", "$249 + dev hrs", "$0 + 200 hrs"] },
 ];

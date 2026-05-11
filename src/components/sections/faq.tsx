@@ -52,6 +52,18 @@ const items = [
     a: "Shopify is rented; steep is owned. After ~7 months of Shopify Basic, you've spent more than steep ever costs. Shopify is also locked-down — you customize themes, not the cart logic. steep gives you the source.",
   },
   {
+    q: "Does it handle physical products?",
+    a: "Yes. Shippo is wired for live shipping rates (USPS, UPS, FedEx) in checkout, atomic inventory reservation prevents overselling, and admins can buy + print labels from the order page or enter manual tracking numbers. Saved addresses and refund flow included.",
+  },
+  {
+    q: "Does it handle digital downloads?",
+    a: "Yes. HMAC-signed download URLs with short expiry — no guessable item IDs. The buyer&apos;s account page shows their entitlements. Re-download is supported.",
+  },
+  {
+    q: "Can I sell both digital and physical from the same store?",
+    a: "Yes. Products can be either; the cart handles mixed orders. Shipping only charges on the physical line items, downloads only fulfill on the digital ones.",
+  },
+  {
     q: "What payment methods can I use?",
     a: "Stripe — credit/debit, Apple Pay, Google Pay, and Klarna/Affirm if you enable them in your Stripe dashboard. Express checkout from the PDP for fewer clicks.",
   },

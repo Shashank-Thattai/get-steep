@@ -23,25 +23,25 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "steep — your digital-product store, this weekend",
+    default: "steep — your storefront, this weekend",
     template: "%s — steep",
   },
   description:
-    "A finished Next.js storefront for selling digital products. Cart, checkout, admin, email — all wired. Pay once, own the code, ship today.",
+    "A finished Next.js storefront. Sell digital downloads or ship physical goods. Cart, checkout, admin, email, shipping, inventory — all wired. Pay once, own the code, ship today.",
   metadataBase: new URL("https://buy.steep.shashankthattai.dev"),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "steep",
-    title: "steep — your digital-product store, this weekend",
+    title: "steep — your storefront, this weekend",
     description:
-      "A finished Next.js storefront — cart, checkout, admin, email all wired. Pay once. Own it. Ship today.",
+      "Finished Next.js storefront. Digital downloads or physical goods. Cart, checkout, admin, email, shipping, inventory — all wired. Pay once. Own it.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "steep — your digital-product store, this weekend",
+    title: "steep — your storefront, this weekend",
     description:
-      "Finished Next.js storefront. Cart, checkout, admin, email — wired. Pay once. Own it.",
+      "Finished Next.js storefront. Digital or physical. Pay once. Own it.",
   },
   robots: { index: true, follow: true },
 };

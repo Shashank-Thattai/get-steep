@@ -43,9 +43,9 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
             <div className="steep-display mb-3 text-3xl leading-none">steep</div>
-            <p className="steep-body-sm max-w-[28ch] text-steep-ink-3">
-              A finished Next.js storefront for selling digital products. Own
-              the code. Ship today.
+            <p className="steep-body-sm max-w-[30ch] text-steep-ink-3">
+              A finished Next.js storefront. Digital or physical. Own the code.
+              Ship today.
             </p>
           </div>
           {cols.map((c) => (

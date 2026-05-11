@@ -49,6 +49,15 @@ const tabs = [
     ],
   },
   {
+    key: "physical",
+    label: "Physical",
+    bullets: [
+      "Live shipping rates via Shippo — USPS, UPS, FedEx in checkout",
+      "Atomic inventory reservation — no overselling under load",
+      "Buy + print labels from admin, or accept manual tracking",
+    ],
+  },
+  {
     key: "mobile",
     label: "Mobile",
     bullets: [
