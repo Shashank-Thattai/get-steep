@@ -13,12 +13,12 @@ export function LiveDemo() {
             </h2>
           </div>
           <a
-            href={SITE.demoUrl}
+            href={SITE.demoSpawnUrl}
             target="_blank"
             rel="noopener"
             className="inline-flex items-center gap-2 rounded-md border border-steep-line bg-steep-bone px-4 py-2 text-sm hover:bg-steep-bg"
           >
-            Open in new tab <ExternalLink className="size-3.5" />
+            Spin up your own sandbox <ExternalLink className="size-3.5" />
           </a>
         </div>
         <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-steep-line bg-steep-bone shadow-[var(--steep-shadow-3)]">
@@ -31,8 +31,10 @@ export function LiveDemo() {
           />
         </div>
         <p className="steep-meta mt-4 text-steep-ink-3">
-          Click around. Add to cart. The admin login is demo@steep.dev /
-          see-the-demo — writes locked, reads open.
+          The iframe above is the live store, read-only. Click &quot;Spin up
+          your own sandbox&quot; to get a private, isolated copy you can
+          actually click around in — admin access, test Stripe checkout,
+          the works. Auto-resets after 4 hours.
         </p>
       </div>
     </section>
