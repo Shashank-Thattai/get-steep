@@ -24,15 +24,16 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="steep-display mb-6 max-w-[16ch]">
-            Launch your storefront this weekend.
+          <h1 className="steep-display mb-6 max-w-[18ch]">
+            Outgrew Shopify? Step up.
           </h1>
 
           <p className="steep-body mb-8 max-w-[56ch] text-steep-ink-2">
-            steep is a finished Next.js store. Sell digital downloads, ship
-            physical goods, or charge recurring subscriptions. Cart, checkout,
-            admin, email, shipping, inventory, MRR dashboard — all wired. Pay
-            once. Own the code.
+            steep is a finished Next.js store you own outright. For founders
+            serious enough about their product to want the source. Sell digital
+            downloads, ship physical goods, charge recurring subscriptions —
+            cart, checkout, admin, email, shipping, inventory, MRR dashboard,
+            all wired. Pay once. Stop renting your storefront.
           </p>
 
           <div className="mb-5 flex flex-wrap items-center gap-3">

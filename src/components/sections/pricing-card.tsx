@@ -15,9 +15,10 @@ const included = [
   "Resend transactional emails (12 templates: orders, shipping, refunds, subscriptions)",
   "Supabase auth + RLS + MFA + passkeys",
   "23 docs pages + Playwright e2e suites",
-  "Lifetime updates (covers v1.1 SaaS + future net-new features)",
+  "Lifetime updates on the v1.x line — bug fixes, security patches, new features",
+  "v1 buyer? 50% off any future v2 upgrade (capped at $149). First 50 buyers grandfathered free.",
   "30-day refund — no questions",
-  "MIT-style license (no resale, no fork-and-sell)",
+  "Commercial source-available license — pay once, run one store, can't repackage and resell",
 ];
 
 export function PricingCard() {
