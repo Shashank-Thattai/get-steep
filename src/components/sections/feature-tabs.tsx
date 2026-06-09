@@ -1,5 +1,6 @@
 "use client";
 import { Tabs } from "@base-ui/react/tabs";
+import Image from "next/image";
 import { useState } from "react";
 
 const tabs = [
@@ -120,10 +121,16 @@ export function FeatureTabs() {
                   ))}
                 </ul>
               </div>
-              <div className="aspect-video rounded-lg border border-dashed border-steep-line bg-steep-paper">
-                <p className="steep-meta flex h-full items-center justify-center text-steep-ink-3">
-                  screenshot — /public/screenshots/{t.key}.png
-                </p>
+              <div className="relative aspect-video overflow-hidden rounded-lg border border-steep-line bg-steep-paper">
+                <Image
+                  src={`/screenshots/${t.key}.png`}
+                  alt={`${t.label} surface — screenshot from the live demo`}
+                  width={1600}
+                  height={1000}
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 720px, 100vw"
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
             </Tabs.Panel>
           ))}
