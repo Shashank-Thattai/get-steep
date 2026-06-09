@@ -7,7 +7,7 @@ export default function NotFound() {
       <h1 className="steep-display mb-4 text-5xl">Lost the trail.</h1>
       <p className="steep-body mb-8 max-w-md text-steep-ink-2">
         That page doesn&apos;t exist on the steep buy site. The store itself is
-        at steep.shashankthattai.dev.
+        at www.shipsteep.com.
       </p>
       <Link
         href="/"

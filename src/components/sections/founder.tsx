@@ -1,3 +1,5 @@
+// TODO(founder-photo): drop a real headshot at public/brand/founder-shashank.jpg (square, 256x256 min for retina).
+import Image from "next/image";
 import { SITE } from "@/lib/site";
 
 export function Founder() {
@@ -7,7 +9,13 @@ export function Founder() {
         <p className="steep-caps mb-2 text-steep-ink-3">12 · Founder note</p>
         <div className="rounded-xl border border-steep-line bg-steep-bone p-8 sm:p-10">
           <div className="mb-6 flex items-center gap-4">
-            <div className="size-12 shrink-0 rounded-full bg-steep-moss/10 ring-1 ring-steep-moss/20" />
+            <Image
+              src="/brand/founder-shashank.jpg"
+              alt={`${SITE.founderName}, founder of steep`}
+              width={96}
+              height={96}
+              className="rounded-full"
+            />
             <div>
               <div className="steep-h3">{SITE.founderName}</div>
               <div className="steep-meta text-steep-ink-3">

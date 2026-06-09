@@ -14,9 +14,12 @@ export function TechStack() {
     <section className="steep-section">
       <div className="steep-container">
         <p className="steep-caps mb-2 text-steep-ink-3">07 · Stack</p>
-        <h2 className="steep-h2 mb-10 max-w-[26ch]">
+        <h2 className="steep-h2 mb-4 max-w-[26ch]">
           Boring, proven, owned by you.
         </h2>
+        <p className="steep-body mb-10 max-w-[60ch] text-steep-ink-2">
+          Picked boring tech on purpose. Swap any layer.
+        </p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stack.map((s) => (
             <div

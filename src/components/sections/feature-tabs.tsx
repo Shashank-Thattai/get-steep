@@ -9,7 +9,7 @@ const tabs = [
     bullets: [
       "Collections, product pages, search, wishlist, recently-viewed",
       "Mobile-first — sheet drawer cart, iOS-safe layouts",
-      "Sub-second loads, server components throughout",
+      "Server Components default. PageSpeed scores published in /compare.",
     ],
   },
   {

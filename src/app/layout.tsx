@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     "A finished Next.js storefront. Sell digital downloads, ship physical goods, or charge recurring subscriptions. Cart, checkout, admin, email, shipping, inventory, MRR dashboard — all wired. Pay once, own the code, ship today.",
-  metadataBase: new URL("https://buy.steep.shashankthattai.dev"),
+  metadataBase: new URL("https://buy.shipsteep.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -46,6 +46,19 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Steep Ship LLC",
+  url: "https://buy.shipsteep.com",
+  sameAs: [],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "shipsteep@gmail.com",
+    contactType: "customer support",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -54,6 +67,18 @@ export default function RootLayout({
       lang="en"
       className={`${sans.variable} ${display.variable} ${mono.variable}`}
     >
+      <head>
+        <link rel="canonical" href="https://buy.shipsteep.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema).replace(
+              /</g,
+              "\\u003c",
+            ),
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">{children}</body>
     </html>
   );

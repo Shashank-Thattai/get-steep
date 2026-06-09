@@ -82,8 +82,8 @@ export default function ThanksPage() {
           </div>
 
           <p className="steep-meta mt-8 text-steep-ink-3">
-            30-day refund · Lifetime updates · License terms at{" "}
-            <Link href="/" className="underline">buy.steep.shashankthattai.dev</Link>
+            14-day refund — no refund after download or accepting invite · Lifetime updates · License terms at{" "}
+            <Link href="/" className="underline">buy.shipsteep.com</Link>
           </p>
         </div>
       </div>

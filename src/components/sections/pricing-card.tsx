@@ -1,5 +1,4 @@
 import { Check, ArrowRight, Lock } from "lucide-react";
-import { SITE } from "@/lib/site";
 import { COHORT, currentPrice, nextThreshold } from "@/lib/early-count";
 
 const included = [
@@ -16,8 +15,8 @@ const included = [
   "Supabase auth + RLS + MFA + passkeys",
   "23 docs pages + Playwright e2e suites",
   "Lifetime updates on the v1.x line — bug fixes, security patches, new features",
-  "v1 buyer? 50% off any future v2 upgrade (capped at $149). First 50 buyers grandfathered free.",
-  "30-day refund — no questions",
+  "v1 buyer? 50% off any v2 upgrade (capped at 149). First 50 buyers grandfathered free.",
+  "14-day refund — no refund after download or invite",
   "Commercial source-available license — pay once, run one store, can't repackage and resell",
 ];
 
@@ -26,6 +25,26 @@ export function PricingCard() {
   const next = nextThreshold();
   const seatsLeft = next ? next.at - COHORT.sold : 0;
   const cohortPct = next ? Math.round((COHORT.sold / next.at) * 100) : 100;
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "steep — Next.js commerce kit",
+    description:
+      "A finished Next.js 16 storefront kit. Sell digital, physical, or subscription products. Includes admin, checkout, shipping, inventory, and MRR dashboard. Pay once, own the code.",
+    brand: {
+      "@type": "Brand",
+      name: "Steep Ship LLC",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://www.shipsteep.com/products/steep",
+      priceCurrency: "USD",
+      price: String(price),
+      availability: "https://schema.org/InStock",
+    },
+  };
+
   return (
     <section id="pricing" className="steep-section bg-steep-paper">
       <div className="steep-container max-w-3xl">
@@ -91,7 +110,7 @@ export function PricingCard() {
           </ul>
 
           <a
-            href={SITE.stripePaymentLinkUrl}
+            href="https://www.shipsteep.com/products/steep"
             className="group flex w-full items-center justify-center gap-2 rounded-md bg-steep-moss px-5 py-4 text-lg font-medium text-steep-bg shadow-[var(--steep-shadow-2)] transition hover:bg-steep-moss-2 hover:shadow-[var(--steep-shadow-3)]"
           >
             <Lock className="size-4" strokeWidth={2.5} />
@@ -99,7 +118,7 @@ export function PricingCard() {
             <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
           </a>
           <p className="steep-meta mt-4 text-center text-steep-ink-3">
-            Secure checkout on Stripe · refund in one email · no subscription
+            Secure checkout on Stripe · 14-day refund — no refund after download or invite · no subscription
           </p>
         </div>
 
@@ -108,6 +127,13 @@ export function PricingCard() {
           That&apos;s less than 7 months of Shopify Basic. Less than ShipFast All-in
           ($249). Less than 3 billable hours.
         </p>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productSchema).replace(/</g, "\\u003c"),
+          }}
+        />
       </div>
     </section>
   );

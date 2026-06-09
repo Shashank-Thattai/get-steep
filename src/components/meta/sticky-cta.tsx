@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { SITE } from "@/lib/site";
 import { currentPrice, nextThreshold } from "@/lib/early-count";
 
 /**
@@ -47,13 +46,13 @@ export function StickyCta() {
             <div className="font-medium">steep — finished storefront kit</div>
             <div className="text-steep-ink-3 text-[12px]">
               {next
-                ? `Goes to $${next.price} at ${next.at} buyers · 30-day refund`
-                : "30-day refund · Lifetime updates"}
+                ? `Goes to $${next.price} at ${next.at} buyers · 14-day refund — no refund after download or invite`
+                : "14-day refund — no refund after download or invite · Lifetime updates"}
             </div>
           </div>
         </div>
         <a
-          href={SITE.stripePaymentLinkUrl}
+          href="https://www.shipsteep.com/products/steep"
           className="inline-flex items-center gap-2 rounded-md bg-steep-moss px-5 py-2.5 text-sm font-medium text-steep-bg hover:bg-steep-moss-2"
         >
           Get steep — ${price}

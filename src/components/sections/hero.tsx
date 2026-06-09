@@ -25,20 +25,16 @@ export function Hero() {
           </div>
 
           <h1 className="steep-display mb-6 max-w-[18ch]">
-            Outgrew Shopify? Step up.
+            Your storefront, owned. Not rented.
           </h1>
 
           <p className="steep-body mb-8 max-w-[56ch] text-steep-ink-2">
-            steep is a finished Next.js store you own outright. For founders
-            serious enough about their product to want the source. Sell digital
-            downloads, ship physical goods, charge recurring subscriptions —
-            cart, checkout, admin, email, shipping, inventory, MRR dashboard,
-            all wired. Pay once. Stop renting your storefront.
+            A finished Next.js store. Sell digital, physical, or subscriptions. Pay 199 once, ship this weekend, never pay rent again.
           </p>
 
           <div className="mb-5 flex flex-wrap items-center gap-3">
             <a
-              href={SITE.stripePaymentLinkUrl}
+              href="https://www.shipsteep.com/products/steep"
               className="group inline-flex items-center gap-2 rounded-md bg-steep-moss px-6 py-3.5 text-base font-medium text-steep-bg shadow-[var(--steep-shadow-2)] transition hover:bg-steep-moss-2 hover:shadow-[var(--steep-shadow-3)]"
             >
               Get steep — ${price}
@@ -87,15 +83,19 @@ export function Hero() {
           <div className="flex flex-wrap gap-x-4 gap-y-1.5">
             <span className="inline-flex items-center gap-1.5 text-[12px] text-steep-ink-2">
               <RefreshCw className="size-3.5 text-steep-moss" strokeWidth={2} />
-              30-day refund, no questions
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[12px] text-steep-ink-2">
-              <InfinityIcon className="size-3.5 text-steep-moss" strokeWidth={2} />
-              Lifetime updates included
+              14-day refund
             </span>
             <span className="inline-flex items-center gap-1.5 text-[12px] text-steep-ink-2">
               <Shield className="size-3.5 text-steep-moss" strokeWidth={2} />
-              MIT-style license
+              No refund after download or invite
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[12px] text-steep-ink-2">
+              <InfinityIcon className="size-3.5 text-steep-moss" strokeWidth={2} />
+              Pay once
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[12px] text-steep-ink-2">
+              <Shield className="size-3.5 text-steep-moss" strokeWidth={2} />
+              Own the code
             </span>
           </div>
         </div>

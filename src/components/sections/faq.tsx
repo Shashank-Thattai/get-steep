@@ -29,7 +29,7 @@ const items = [
   },
   {
     q: "What if I get stuck?",
-    a: "Ships with a TROUBLESHOOTING.md covering the common gotchas. For anything else, email shashank@ — I read everything. Buyers also get a private Discord (early-access tier).",
+    a: "Ships with a TROUBLESHOOTING.md covering the common gotchas. For anything else, email shipsteep@gmail.com — I read everything. Buyers also get a private Discord (early-access tier).",
   },
   {
     q: "Is it actively maintained?",
@@ -41,7 +41,7 @@ const items = [
   },
   {
     q: "Can I get a refund?",
-    a: "Yes — 30 days, no questions, one email. If steep doesn't fit, take your money back.",
+    a: "14-day refund — no refund after download or accepting invite. The refund window is 14 days from purchase, but the refund becomes void once any of: (a) you've downloaded any file, (b) you've accepted the GitHub collaborator invite, (c) you've viewed the order confirmation page, or (d) a share link has been sent via email. Physical products keep the existing 30-day-before-shipment / case-by-case-after policy.",
   },
   {
     q: "What's the difference between steep and ShipFast?",
@@ -65,7 +65,7 @@ const items = [
   },
   {
     q: "Does it handle digital downloads?",
-    a: "Yes. HMAC-signed download URLs with short expiry — no guessable item IDs. The buyer&apos;s account page shows their entitlements. Re-download is supported.",
+    a: "Yes. HMAC-signed download URLs with short expiry — no guessable item IDs. The buyer's account page shows their entitlements. Re-download is supported.",
   },
   {
     q: "Can I sell both digital and physical from the same store?",
@@ -82,6 +82,19 @@ const items = [
 ];
 
 export function Faq() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: a,
+      },
+    })),
+  };
+
   return (
     <section id="faq" className="steep-section">
       <div className="steep-container max-w-3xl">
@@ -105,6 +118,12 @@ export function Faq() {
             </Accordion.Item>
           ))}
         </Accordion.Root>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+          }}
+        />
       </div>
     </section>
   );

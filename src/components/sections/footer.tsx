@@ -12,9 +12,10 @@ const cols = [
   {
     title: "Legal",
     links: [
-      { label: "License", href: "/legal/license" },
-      { label: "Terms", href: "/legal/terms" },
-      { label: "Privacy", href: "/legal/privacy" },
+      { label: "Terms", href: "https://www.shipsteep.com/legal/terms" },
+      { label: "Privacy", href: "https://www.shipsteep.com/legal/privacy" },
+      { label: "Refund", href: "https://www.shipsteep.com/legal/refund" },
+      { label: "License", href: "https://www.shipsteep.com/legal/license" },
     ],
   },
   {
@@ -68,7 +69,13 @@ export function Footer() {
         </div>
         <div className="steep-hairline mt-12 flex flex-wrap items-center justify-between gap-3 pt-6">
           <p className="steep-meta text-steep-ink-3">
-            © 2026 steep · built with steep itself
+            © 2026 Steep Ship LLC · Delaware, USA ·{" "}
+            <a
+              href={`mailto:${SITE.contactEmail}`}
+              className="underline decoration-steep-line underline-offset-4 hover:text-steep-ink"
+            >
+              {SITE.contactEmail}
+            </a>
           </p>
           <p className="steep-meta text-steep-ink-3">
             No analytics SDKs on this page

@@ -3,14 +3,14 @@ import {
 } from "lucide-react";
 
 const items = [
-  { Icon: Database, name: "RLS", body: "Buyers see only their own orders — enforced at the database row level, not in code." },
-  { Icon: Key, name: "MFA", body: "TOTP second factor for all admin accounts, with backup codes." },
-  { Icon: Fingerprint, name: "Passkeys", body: "WebAuthn passwordless auth for admins. Hardware key support." },
-  { Icon: FileLock, name: "Signed downloads", body: "HMAC-signed URLs with short expiry — no guessing item IDs." },
-  { Icon: ShieldCheck, name: "CSRF", body: "Token validation on every mutating request. Cookies are SameSite=Lax." },
-  { Icon: Gauge, name: "Rate-limit", body: "Per-IP throttling on auth and checkout endpoints. Coupon brute-force blocked." },
-  { Icon: ScrollText, name: "Audit log", body: "Every admin write is recorded with actor, IP, before/after." },
-  { Icon: Webhook, name: "Stripe sig verify", body: "Webhooks require Stripe signature + idempotent event processing." },
+  { Icon: Database, name: "RLS on every table", body: "Buyers see only their own orders — enforced at the database row level, not in code." },
+  { Icon: Fingerprint, name: "MFA + WebAuthn passkeys for admin", body: "TOTP and hardware-backed passkeys for every admin account. No password-only logins." },
+  { Icon: ShieldCheck, name: "CSP nonces, no unsafe-inline", body: "Strict Content Security Policy with per-request nonces. No inline scripts or styles." },
+  { Icon: Gauge, name: "Per-IP rate limiting", body: "Throttling on auth, checkout, and coupon endpoints. Brute-force attempts are blocked." },
+  { Icon: Webhook, name: "Stripe / Shippo / LemonSqueezy webhook signatures verified", body: "Every webhook is HMAC-verified and idempotent. Replays are rejected." },
+  { Icon: FileLock, name: "HMAC-signed downloads (5-min TTL, 10-download cap, email watermark)", body: "Download URLs expire in 5 minutes, cap at 10 downloads per purchase, and embed the buyer email watermark." },
+  { Icon: Key, name: "STEEP_LICENSE_ID watermark (DMCA-traceable per buyer)", body: "Every buyer's repo carries a unique license ID — if it leaks, the DMCA trail is unambiguous." },
+  { Icon: ScrollText, name: "462 unit tests + Playwright E2E + 78% coverage", body: "Security regressions get caught before they ship. The test suite is part of the kit." },
 ];
 
 export function SecurityGrid() {

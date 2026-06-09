@@ -13,6 +13,9 @@ export function Testimonials() {
     <section className="steep-section">
       <div className="steep-container">
         <p className="steep-caps mb-2 text-steep-ink-3">13 · What buyers say</p>
+        <p className="steep-meta mb-4 text-steep-ink-3">
+          This is from an agency client whose site I built end-to-end on steep — kit-buyer testimonials coming as the cohort ships.
+        </p>
         <h2 className="steep-h2 mb-10 max-w-[26ch]">
           Early days. One real voice so far.
         </h2>

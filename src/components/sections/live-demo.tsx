@@ -29,6 +29,20 @@ export function LiveDemo() {
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             className="size-full"
           />
+          <noscript>
+            <div className="absolute inset-0 flex items-center justify-center bg-steep-bone p-6 text-center">
+              <p className="steep-body text-steep-ink-2">
+                Live demo at{" "}
+                <a
+                  href={SITE.demoUrl}
+                  className="underline decoration-steep-line underline-offset-4 hover:text-steep-ink"
+                >
+                  www.shipsteep.com
+                </a>
+                .
+              </p>
+            </div>
+          </noscript>
         </div>
         <p className="steep-meta mt-4 text-steep-ink-3">
           The iframe above is the live store, read-only. Click &quot;Spin up

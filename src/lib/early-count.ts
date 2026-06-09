@@ -5,11 +5,11 @@
  * v2 (Phase F): increment automatically via Stripe webhook → Supabase.
  */
 export const COHORT = {
-  sold: 0,
-  earlySeats: 25,
+  sold: 2,
+  earlySeats: 10,
   earlyPriceUsd: 199,
-  midPriceUsd: 249,
-  midSeats: 100,
+  midPriceUsd: 250,
+  midSeats: 50,
   finalPriceUsd: 299,
 } as const;
 

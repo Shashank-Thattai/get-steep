@@ -29,7 +29,7 @@ export default async function Image() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
           <div style={{ fontSize: 32, color: "#1F3A30" }}>$199 · one-time</div>
-          <div style={{ fontSize: 22, color: "#5C6B65" }}>buy.steep.shashankthattai.dev</div>
+          <div style={{ fontSize: 22, color: "#5C6B65" }}>buy.shipsteep.com</div>
         </div>
       </div>
     ),

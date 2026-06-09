@@ -16,6 +16,7 @@ import { Founder } from "@/components/sections/founder";
 import { Testimonials } from "@/components/sections/testimonials";
 import { PricingCard } from "@/components/sections/pricing-card";
 import { Faq } from "@/components/sections/faq";
+import { NewsletterCapture } from "@/components/sections/newsletter-capture";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 
@@ -40,6 +41,7 @@ export default function Page() {
         <Testimonials />
         <PricingCard />
         <Faq />
+        <NewsletterCapture />
         <FinalCta />
       </main>
       <Footer />
