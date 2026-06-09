@@ -1,9 +1,11 @@
 import { Quote } from "lucide-react";
 
 const featured = {
-  quote: "{{REPLACE_WITH_REAL_TESTIMONIAL_QUOTE}} — short, concrete, results-oriented.",
-  name: "{{NAME}}",
-  role: "{{ROLE}}",
+  quote:
+    "From day one the team understood exactly what we wanted and transformed our ideas into a clean, modern, professional site. The process was smooth, communication was excellent, and every suggestion was implemented quickly. The site reflects our energy and vision — we're already getting great feedback from visitors.",
+  name: "Machi Collective",
+  role: "Owner, machicollective.com",
+  href: "https://machicollective.com",
 };
 
 export function Testimonials() {
@@ -23,7 +25,14 @@ export function Testimonials() {
             </blockquote>
             <figcaption>
               <div className="steep-body font-medium">{featured.name}</div>
-              <div className="steep-meta text-steep-ink-3">{featured.role}</div>
+              <a
+                href={featured.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="steep-meta text-steep-ink-3 underline-offset-2 hover:underline hover:text-steep-moss"
+              >
+                {featured.role}
+              </a>
             </figcaption>
           </figure>
 
