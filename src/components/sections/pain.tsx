@@ -1,6 +1,6 @@
 export function PainBlock() {
   const rows = [
-    { label: "Shopify Basic", math: "$29/mo × 60 mo", total: "$1,740", muted: true },
+    { label: "Shopify Basic", math: "$39/mo × 60 mo", total: "$2,340", muted: true },
     { label: "Custom build", math: "120 hrs × $80/hr", total: "$9,600", muted: true },
     { label: "steep", math: "one-time", total: "$199", muted: false },
   ];
