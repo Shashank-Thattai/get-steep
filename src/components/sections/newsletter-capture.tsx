@@ -14,12 +14,21 @@ export function NewsletterCapture() {
     if (!email) return;
     setStatus("submitting");
     try {
+      // Cross-origin POST: this component runs on buy.shipsteep.com but the
+      // newsletter API lives on www.shipsteep.com. The API allowlists this
+      // origin and returns CORS headers, so the browser can read the JSON.
       const res = await fetch("https://www.shipsteep.com/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      if (!res.ok) throw new Error("subscribe failed");
+      // Read the JSON body even on non-OK so a server "success: false" or an
+      // unparseable body both route to the graceful error copy + mailto.
+      const data = (await res.json().catch(() => null)) as {
+        success?: boolean;
+        error?: string;
+      } | null;
+      if (!res.ok || !data?.success) throw new Error("subscribe failed");
       setStatus("success");
       setEmail("");
     } catch {

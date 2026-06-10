@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 type Cell = string | boolean;
 const cols = ["steep", "Shopify", "GoDaddy", "ShipFast", "DIY"] as const;
 const rows: { label: string; values: [Cell, Cell, Cell, Cell, Cell] }[] = [
-  { label: "Price", values: ["$199 once", "$29/mo", "$20.99/mo (Commerce)", "$199–$299 once", "$0 + time"] },
+  { label: "Price", values: ["$199 once", "$39/mo", "$20.99/mo (Commerce)", "$199–$299 once", "$0 + time"] },
   { label: "Setup time", values: ["~2 hours", "~1 day", "~1 day", "~hours (then build product)", "80–200 hrs"] },
   { label: "Own the code", values: [true, false, false, true, true] },
   { label: "Storefront included", values: [true, true, true, false, false] },
@@ -18,12 +18,24 @@ const rows: { label: string; values: [Cell, Cell, Cell, Cell, Cell] }[] = [
   { label: "Digital downloads (signed URLs)", values: [true, "addon", false, false, false] },
   { label: "MFA / passkeys", values: [true, "admin only", false, false, false] },
   { label: "Customizable (source)", values: [true, false, false, true, true] },
-  { label: "5-year TCO", values: ["$199", "$1,740", "$1,200+", "$199–$299 + dev hrs", "$0 + 200 hrs"] },
+  { label: "5-year TCO", values: ["$199", "$2,340", "$1,200+", "$199–$299 + dev hrs", "$0 + 200 hrs"] },
 ];
 
 function Cell({ v }: { v: Cell }) {
-  if (v === true) return <Check className="size-4 text-steep-moss" />;
-  if (v === false) return <X className="size-4 text-steep-ink-4" />;
+  if (v === true)
+    return (
+      <>
+        <Check aria-hidden className="size-4 text-steep-moss" />
+        <span className="sr-only">Included</span>
+      </>
+    );
+  if (v === false)
+    return (
+      <>
+        <X aria-hidden className="size-4 text-steep-err" />
+        <span className="sr-only">Not included</span>
+      </>
+    );
   return <span className="steep-meta text-steep-ink-2">{v}</span>;
 }
 
@@ -75,7 +87,7 @@ export function ComparisonTable() {
           similar price points, but they solve different problems.
         </p>
         <p className="steep-meta mt-2 text-steep-ink-3">
-          Verified June 2026 against shopify.com/pricing, shipfa.st, godaddy.com/websites/ecommerce-website.
+          Verified June 10, 2026 against shopify.com/pricing, shipfa.st, godaddy.com/websites/ecommerce-website.
         </p>
       </div>
     </section>

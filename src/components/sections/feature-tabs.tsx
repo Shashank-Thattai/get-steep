@@ -86,7 +86,7 @@ export function FeatureTabs() {
       <div className="steep-container">
         <p className="steep-caps mb-2 text-steep-ink-3">06 · Features</p>
         <h2 className="steep-h2 mb-10 max-w-[26ch]">
-          Six surfaces. All finished.
+          Eight surfaces. All finished.
         </h2>
         <Tabs.Root value={active} onValueChange={(v) => setActive(v as string)}>
           <Tabs.List className="flex flex-wrap gap-1 border-b border-steep-line">
@@ -121,16 +121,28 @@ export function FeatureTabs() {
                   ))}
                 </ul>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-lg border border-steep-line bg-steep-paper">
-                <Image
-                  src={`/screenshots/${t.key}.png`}
-                  alt={`${t.label} surface — screenshot from the live demo`}
-                  width={1600}
-                  height={1000}
-                  loading="lazy"
-                  sizes="(min-width: 1024px) 720px, 100vw"
-                  className="h-full w-full object-cover object-top"
-                />
+              <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-lg border border-steep-line bg-steep-paper">
+                {t.key === "mobile" ? (
+                  <Image
+                    src={`/screenshots/${t.key}.png`}
+                    alt={`${t.label} surface — screenshot from the live demo`}
+                    width={390}
+                    height={844}
+                    loading="lazy"
+                    sizes="(min-width: 1024px) 720px, 100vw"
+                    className="h-full w-auto object-contain"
+                  />
+                ) : (
+                  <Image
+                    src={`/screenshots/${t.key}.png`}
+                    alt={`${t.label} surface — screenshot from the live demo`}
+                    width={1600}
+                    height={1000}
+                    loading="lazy"
+                    sizes="(min-width: 1024px) 720px, 100vw"
+                    className="h-full w-full object-cover object-top"
+                  />
+                )}
               </div>
             </Tabs.Panel>
           ))}

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SITE } from "@/lib/site";
 
 export function Nav() {
   return (
@@ -14,7 +13,7 @@ export function Nav() {
           <a href="#faq" className="steep-caps text-steep-ink-3 hover:text-steep-ink">FAQ</a>
         </nav>
         <a
-          href={SITE.stripePaymentLinkUrl}
+          href="https://www.shipsteep.com/products/steep"
           className="rounded-md bg-steep-moss px-3 py-1.5 text-sm font-medium text-steep-bg hover:bg-steep-moss-2"
         >
           Get steep
