@@ -1,4 +1,4 @@
-// TODO(founder-photo): drop a real headshot at public/brand/founder-shashank.jpg (square, 256x256 min for retina).
+// Founder headshot lives at public/brand/founder-shashank.jpg.
 import Image from "next/image";
 import { SITE } from "@/lib/site";
 
